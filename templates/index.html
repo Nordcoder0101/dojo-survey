@@ -8,16 +8,23 @@
   <link rel="stylesheet" type="text/css" media="screen" href={{ url_for('static', filename='style.css') }} />
 </head>
 <body>
-  <form action="/users" method="post">
-    Name: <input type="text" name="name">
-    Email <select name="dojo">
-      <option value="Seattle">Volvo</option>
-      <option value="San Jose">Volvo</option>
-      <option value="Chicago">Volvo</option>
+  <div>
+    <form action="/users" method="post">
+      Name: <input type="text" name="name">
+      <h3>Your Dojo</h3>
+      <select name="dojo">
+        <option value="Seattle">Seattle</option>
+        <option value="San Jose">San Jose</option>
+        <option value="Chicago">Chicago</option>
+      </select>  
+      <h3>Favorite Language</h3>
       <select name ="favorite_language">
-      <option value="Python">Python</option>
-      <option value="C#">C#</option>
-      <option value="JavaScript">JavaScript</option>
-      <option value="Java">Java</option>
-    <input type-'submit' value="create user">
+        <option value="Python">Python</option>
+        <option value="C#">C#</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Java">Java</option>
+      </select>
+      <textarea name="comments" cols="60" rows="10"></textarea> 
+      <input type="submit" value="create user">
+    <div>  
   </form>
