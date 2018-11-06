@@ -9,6 +9,14 @@
 </head>
 <body>
   <div>
+  {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          {% for message in messages %}
+              <p>{{message}}</p>
+          {% endfor %}
+      {% endif %}
+  {% endwith %}
+      
     <form action="/users" method="post">
       Name: <input type="text" name="name">
       <h3>Your Dojo</h3>
@@ -25,6 +33,6 @@
         <option value="Java">Java</option>
       </select>
       <textarea name="comments" cols="60" rows="10"></textarea> 
-      <input type="submit" value="create user">
+      <input type="submit" value="create_user">
     <div>  
   </form>
